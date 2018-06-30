@@ -33,6 +33,46 @@
             "enumb": 73,
             "eventtype": 8,
             "m_owner": "97cfc43c-01bc-46af-b038-6211e05e7358"
+        },
+        {
+            "id": "ca494b3f-775b-437d-b8d8-809ced53c7b0",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "97cfc43c-01bc-46af-b038-6211e05e7358",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "97cfc43c-01bc-46af-b038-6211e05e7358"
+        },
+        {
+            "id": "e2fea5ac-3538-4854-8f74-01d5e19ad307",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 1,
+            "eventtype": 3,
+            "m_owner": "97cfc43c-01bc-46af-b038-6211e05e7358"
+        },
+        {
+            "id": "84e0977d-4d3c-4233-b19f-32196be533f1",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 2,
+            "eventtype": 3,
+            "m_owner": "97cfc43c-01bc-46af-b038-6211e05e7358"
+        },
+        {
+            "id": "52b86dcb-1d5e-41ea-8c39-6e459b934a9d",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 8,
+            "eventtype": 7,
+            "m_owner": "97cfc43c-01bc-46af-b038-6211e05e7358"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -64,6 +104,20 @@
             "resourceFilter": 1023,
             "value": "3",
             "varName": "my_speed",
+            "varType": 0
+        },
+        {
+            "id": "72130f8d-39de-4443-b116-21c61b86ad11",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "push_force",
             "varType": 0
         }
     ],
