@@ -5,16 +5,6 @@
     "name": "obj_test2",
     "eventList": [
         {
-            "id": "6a598e07-8c99-4aa3-ad58-5391a1f56183",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 56,
-            "eventtype": 6,
-            "m_owner": "97cfc43c-01bc-46af-b038-6211e05e7358"
-        },
-        {
             "id": "e8335471-d122-4959-ba96-1cd85c4fe0f8",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -61,7 +51,22 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "922aed2e-ac23-4a19-9bc1-620878a18199",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "3",
+            "varName": "my_speed",
+            "varType": 0
+        }
+    ],
     "solid": false,
     "spriteId": "4227c246-92f8-4ea7-9a46-1f7a3aaf9c2d",
     "visible": true
