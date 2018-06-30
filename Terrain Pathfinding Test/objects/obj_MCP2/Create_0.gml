@@ -6,7 +6,7 @@ var grid_height = room_height div CELL_SIZE;
 mp_grid = mp_grid_create(0,0,grid_width,grid_height,CELL_SIZE,CELL_SIZE);
 mp_grid_add_instances(mp_grid,obj_wall,false);
 
-repeat(100) {
+repeat(1) {
 	instance_create_layer(320,180,"Instances",obj_test2);
 }
 
