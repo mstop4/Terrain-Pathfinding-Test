@@ -1,7 +1,8 @@
 #macro CELL_SIZE 16
+display_set_gui_maximize(2,2,0,0);
+
 var grid_width = room_width div CELL_SIZE;
 var grid_height = room_height div CELL_SIZE;
-
 mp_grid = mp_grid_create(0,0,grid_width,grid_height,CELL_SIZE,CELL_SIZE);
 mp_grid_add_instances(mp_grid,obj_wall,false);
 
@@ -14,6 +15,7 @@ max_fps = -100000;
 track_fps = false;
 alarm[0] = 60;
 
+selecting = false;
 select_start_x = 0;
 select_start_y = 0;
 select_end_x = 0;
