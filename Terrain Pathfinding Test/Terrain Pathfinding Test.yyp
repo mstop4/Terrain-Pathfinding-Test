@@ -71,11 +71,11 @@
             }
         },
         {
-            "Key": "34d652c2-aa08-4212-b762-0d8e6a9464fd",
+            "Key": "40016bc4-3aa2-4f0e-b274-2ceade6007e7",
             "Value": {
-                "id": "129e1cc5-5654-4d4f-9ec9-cf1c077ede8a",
-                "resourcePath": "objects\\obj_wall\\obj_wall.yy",
-                "resourceType": "GMObject"
+                "id": "a7cba362-fef0-4e6c-8182-41374338491d",
+                "resourcePath": "tilesets\\ts_wall\\ts_wall.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {

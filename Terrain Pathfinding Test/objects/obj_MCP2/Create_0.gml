@@ -1,10 +1,9 @@
 #macro CELL_SIZE 16
 display_set_gui_maximize(2,2,0,0);
 
-var grid_width = room_width div CELL_SIZE;
-var grid_height = room_height div CELL_SIZE;
+grid_width = room_width div CELL_SIZE;
+grid_height = room_height div CELL_SIZE;
 mp_grid = mp_grid_create(0,0,grid_width,grid_height,CELL_SIZE,CELL_SIZE);
-mp_grid_add_instances(mp_grid,obj_wall,false);
 
 repeat(5) {
 	instance_create_layer(320,180,"Instances",obj_test2);
