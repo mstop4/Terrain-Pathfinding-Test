@@ -303,6 +303,14 @@
             }
         },
         {
+            "Key": "e1c642af-9fcc-4fba-89dd-92eb58de9819",
+            "Value": {
+                "id": "887e3713-9262-48ff-804f-41faf8e5469a",
+                "resourcePath": "objects\\obj_MDP\\obj_MDP.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
             "Value": {
                 "id": "11028083-4aec-4f06-9f8a-90784e01f226",
