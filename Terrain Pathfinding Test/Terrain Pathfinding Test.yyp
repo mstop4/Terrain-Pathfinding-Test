@@ -42,7 +42,7 @@
             "Key": "098c8ce4-7123-47ab-967f-ca84154d7e33",
             "Value": {
                 "id": "b39b07fc-eb72-4bbd-be5a-13b4b752a068",
-                "resourcePath": "objects\\obj_test\\obj_test.yy",
+                "resourcePath": "objects\\obj_test_old\\obj_test_old.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -52,6 +52,14 @@
                 "id": "bd811d08-89d4-4e0c-a06a-5b68bee4a8db",
                 "resourcePath": "views\\1a4eedde-8c6d-49e3-be84-d352f3e8b4c7.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "2565c7a7-9a94-410a-9dff-bbc82a666c47",
+            "Value": {
+                "id": "af1198dc-de8b-4cb1-aee7-7947f3325471",
+                "resourcePath": "objects\\obj_FPS_counter\\obj_FPS_counter.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -154,7 +162,7 @@
             "Key": "68b363ec-bd3a-473f-8cb7-8c467687206e",
             "Value": {
                 "id": "51b181cc-556e-4915-a7d2-fc4685dda46c",
-                "resourcePath": "objects\\obj_MCP2\\obj_MCP2.yy",
+                "resourcePath": "objects\\obj_MCP\\obj_MCP.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -194,7 +202,7 @@
             "Key": "97cfc43c-01bc-46af-b038-6211e05e7358",
             "Value": {
                 "id": "a8bbd1d7-0b82-4492-a942-2826a99588e3",
-                "resourcePath": "objects\\obj_test2\\obj_test2.yy",
+                "resourcePath": "objects\\obj_unit\\obj_unit.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -202,7 +210,7 @@
             "Key": "99de8172-a972-437d-9b9d-65eec8f83a35",
             "Value": {
                 "id": "d5845b9c-7037-46ed-b6bc-38e5fc6c86b6",
-                "resourcePath": "objects\\obj_MCP\\obj_MCP.yy",
+                "resourcePath": "objects\\obj_MCP_old\\obj_MCP_old.yy",
                 "resourceType": "GMObject"
             }
         },

@@ -7,7 +7,7 @@ var _goal_y = argument[1];
 
 if (selected) {
 	path_clear_points(my_path);
-	var success = mp_grid_path(obj_MCP2.mp_grid,my_path,x,y,_goal_x,_goal_y,true);
+	var success = mp_grid_path(obj_MCP.mp_grid,my_path,x,y,_goal_x,_goal_y,true);
 
 	if (success) {
 		//prune_path(my_path);
