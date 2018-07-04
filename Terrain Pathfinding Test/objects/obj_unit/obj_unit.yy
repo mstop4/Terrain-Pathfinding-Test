@@ -119,6 +119,20 @@
             "value": "1",
             "varName": "push_force",
             "varType": 0
+        },
+        {
+            "id": "3643494a-74f7-41d0-b357-7742e27b7b65",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "5",
+            "varName": "los",
+            "varType": 0
         }
     ],
     "solid": false,

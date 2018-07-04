@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "0d12600c-7dfd-498d-ab09-fb9ba3993121",
+            "Value": {
+                "id": "5c92c8c7-e98b-4285-9f64-35ad3a86fa05",
+                "resourcePath": "sprites\\spr_fog\\spr_fog.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1a4eedde-8c6d-49e3-be84-d352f3e8b4c7",
             "Value": {
                 "id": "bd811d08-89d4-4e0c-a06a-5b68bee4a8db",
@@ -199,6 +207,14 @@
             }
         },
         {
+            "Key": "8f24a302-0dae-401c-a90e-fe8499e91792",
+            "Value": {
+                "id": "bac0b6fd-a85c-4250-9d88-70d00ebeee81",
+                "resourcePath": "objects\\obj_fog\\obj_fog.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "97cfc43c-01bc-46af-b038-6211e05e7358",
             "Value": {
                 "id": "a8bbd1d7-0b82-4492-a942-2826a99588e3",
@@ -340,6 +356,14 @@
                 "id": "b4f77691-f8a2-42c6-b162-9edc63ed6720",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f597a2b2-2294-4f53-a6cd-b258e6eb14f7",
+            "Value": {
+                "id": "9d0aa11d-f177-4ecb-b9b4-ccabea8d36a9",
+                "resourcePath": "tilesets\\ts_fog\\ts_fog.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
