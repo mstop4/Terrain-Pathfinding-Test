@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "7ae348c4-6adf-4abb-8635-f1e03cc87fbf",
+            "Value": {
+                "id": "db193edd-555d-44d2-ac24-57c02c0ca664",
+                "resourcePath": "sprites\\spr_fog1\\spr_fog1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "83c87df7-70d7-40cf-bb1c-eb14abb89b16",
             "Value": {
                 "id": "a448b4c8-56ad-4cd1-8f6d-80b317b002f3",

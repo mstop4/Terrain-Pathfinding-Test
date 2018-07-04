@@ -1,5 +1,5 @@
-var view_x = camera_get_view_x(view_camera);
-var view_y = camera_get_view_y(view_camera);
+view_x = camera_get_view_x(view_camera);
+view_y = camera_get_view_y(view_camera);
 var can_scroll = false;
 
 if (device_mouse_x_to_gui(0) <= scroll_border) {
