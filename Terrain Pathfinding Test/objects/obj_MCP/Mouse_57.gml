@@ -10,7 +10,7 @@ var _settle_y = goal_y;
 
 var num_units = instance_number(obj_unit);
 var unit_count = 0;
-var cur_unit, tile_info, tile_index;
+var cur_unit, tile_info, tile_index, col_info;
 
 // center
 if (spiral_x > 0 && spiral_x < grid_width &&
@@ -20,21 +20,25 @@ if (spiral_x > 0 && spiral_x < grid_width &&
 	tile_index = tile_get_index(tile_info);
 			
 	if (tile_index != 1) {
-		cur_unit = instance_find(obj_unit,unit_count);
-		_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
-		_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
+		col_info = collision_line_tile(goal_x,goal_y,spiral_x,spiral_y,1,ter_tilemap);
 		
-		with (cur_unit) {
-			my_state = unitState.moving;
-			build_path(goal_x,goal_y);
-			settle_x = _settle_x;
-			settle_y = _settle_y;
-		}
+		if (col_info[0] == -1) {
+			cur_unit = instance_find(obj_unit,unit_count);
+			_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
+			_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
 		
-		unit_count++;
+			with (cur_unit) {
+				my_state = unitState.moving;
+				build_path(goal_x,goal_y);
+				settle_x = _settle_x;
+				settle_y = _settle_y;
+			}
+		
+			unit_count++;
 			
-		if (unit_count >= num_units)
-			exit;
+			if (unit_count >= num_units)
+				exit;
+		}
 	}
 }
 
@@ -50,21 +54,25 @@ while (true) {
 			tile_index = tile_get_index(tile_info);
 			
 			if (tile_index != 1) {
-				cur_unit = instance_find(obj_unit,unit_count);
-				_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
-				_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
+				col_info = collision_line_tile(goal_x,goal_y,spiral_x,spiral_y,1,ter_tilemap);
+		
+				if (col_info[0] == -1) {
+					cur_unit = instance_find(obj_unit,unit_count);
+					_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
+					_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
 				
-				with (cur_unit) {
-					my_state = unitState.moving;
-					build_path(goal_x,goal_y);
-					settle_x = _settle_x;
-					settle_y = _settle_y;
-				}
+					with (cur_unit) {
+						my_state = unitState.moving;
+						build_path(goal_x,goal_y);
+						settle_x = _settle_x;
+						settle_y = _settle_y;
+					}
 				
-				unit_count++;
+					unit_count++;
 			
-				if (unit_count >= num_units)
-					exit;
+					if (unit_count >= num_units)
+						exit;
+				}
 			}
 		}
 	}
@@ -80,21 +88,25 @@ while (true) {
 			tile_index = tile_get_index(tile_info);
 			
 			if (tile_index != 1) {
-				cur_unit = instance_find(obj_unit,unit_count);
-				_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
-				_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
+				col_info = collision_line_tile(goal_x,goal_y,spiral_x,spiral_y,1,ter_tilemap);
+		
+				if (col_info[0] == -1) {
+					cur_unit = instance_find(obj_unit,unit_count);
+					_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
+					_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
 				
-				with (cur_unit) {
-					my_state = unitState.moving;
-					build_path(goal_x,goal_y);
-					settle_x = _settle_x;
-					settle_y = _settle_y;
-				}
+					with (cur_unit) {
+						my_state = unitState.moving;
+						build_path(goal_x,goal_y);
+						settle_x = _settle_x;
+						settle_y = _settle_y;
+					}
 				
-				unit_count++;
+					unit_count++;
 			
-				if (unit_count >= num_units)
-					exit;
+					if (unit_count >= num_units)
+						exit;
+				}
 			}
 		}
 	}
