@@ -1,4 +1,4 @@
-/*if (path_speed == 0) {
+/*ßif (path_speed == 0) {
 	var dir_from_other;
 	var dist_to_other = point_distance(x,y,other.x,other.y);
 
@@ -12,4 +12,4 @@
 
 	push_vector_x += push_x;
 	push_vector_y += push_y;
-}*/
+}/*

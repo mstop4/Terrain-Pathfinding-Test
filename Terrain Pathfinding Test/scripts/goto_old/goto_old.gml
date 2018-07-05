@@ -1,4 +1,4 @@
-var spiral_dir = 1;
+/*var spiral_dir = 1;
 var spiral_dist = 1;
 var spiral_x = (mouse_x div CELL_SIZE);
 var spiral_y = (mouse_y div CELL_SIZE);
@@ -12,9 +12,7 @@ var _settle_y = goal_y;
 
 var num_units = instance_number(obj_unit);
 var unit_count = 0;
-var cur_unit, tile_info, tile_index, dist_to_settle;
-
-var temp_path = path_add();
+var cur_unit, tile_info, tile_index, col_info;
 
 // center
 if (spiral_x > 0 && spiral_x < grid_width &&
@@ -24,13 +22,12 @@ if (spiral_x > 0 && spiral_x < grid_width &&
 	tile_index = tile_get_index(tile_info);
 			
 	if (tile_index != 1) {
-		_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
-		_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
-		temp_path = mp_grid_path(mp_grid,temp_path,goal_x,goal_y,_settle_x,_settle_y,true);
-		dist_to_settle = point_distance(_settle_x,_settle_y,goal_x,goal_y);
+		col_info = collision_line_tile(goal_tile_x,goal_tile_y,spiral_x,spiral_y,1,ter_tilemap);
 		
-		if (path_get_length(temp_path) < dist_to_settle * 4) {
+		if (col_info[0] == -1) {
 			cur_unit = instance_find(obj_unit,unit_count);
+			_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
+			_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
 		
 			with (cur_unit) {
 				my_state = unitState.moving;
@@ -59,13 +56,12 @@ while (true) {
 			tile_index = tile_get_index(tile_info);
 			
 			if (tile_index != 1) {
-				_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
-				_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
-				temp_path = mp_grid_path(mp_grid,temp_path,goal_x,goal_y,_settle_x,_settle_y,true);
-				dist_to_settle = point_distance(_settle_x,_settle_y,goal_x,goal_y);
+				col_info = collision_line_tile(goal_tile_x,goal_tile_y,spiral_x,spiral_y,1,ter_tilemap);
 		
-				if (path_get_length(temp_path) < dist_to_settle * 4) {
+				if (col_info[0] == -1) {
 					cur_unit = instance_find(obj_unit,unit_count);
+					_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
+					_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
 				
 					with (cur_unit) {
 						my_state = unitState.moving;
@@ -94,12 +90,9 @@ while (true) {
 			tile_index = tile_get_index(tile_info);
 			
 			if (tile_index != 1) {
-				_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
-				_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
-				temp_path = mp_grid_path(mp_grid,temp_path,goal_x,goal_y,_settle_x,_settle_y,true);
-				dist_to_settle = point_distance(_settle_x,_settle_y,goal_x,goal_y);
+				col_info = collision_line_tile(goal_tile_x,goal_tile_y,spiral_x,spiral_y,1,ter_tilemap);
 		
-				if (path_get_length(temp_path) < dist_to_settle * 4) {
+				if (col_info[0] == -1) {
 					cur_unit = instance_find(obj_unit,unit_count);
 					_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
 					_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
@@ -123,6 +116,4 @@ while (true) {
 	// incr
 	spiral_dir *= -1;
 	spiral_dist++;
-}
-
-path_delete(temp_path);
+}*/
