@@ -1,4 +1,4 @@
-var push_mag = point_distance(0,0,push_vector_x,push_vector_y);
+/*var push_mag = point_distance(0,0,push_vector_x,push_vector_y);
 if (push_mag != 0) {
 	push_vector_x = push_vector_x / push_mag * push_force;
 	push_vector_y = push_vector_y / push_mag * push_force;
@@ -68,4 +68,4 @@ if (push_mag != 0) {
 			y += push_vector_y;
 		}
 	}
-}
+}*/
