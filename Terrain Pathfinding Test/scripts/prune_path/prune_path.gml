@@ -1,7 +1,7 @@
 /// @desc prune_path(path)
 /// @arg path
 
-var _path = argument[0];
+/*var _path = argument[0];
 var _num_points = path_get_number(_path);
 var _cur_x, _cur_y, _next_x, _next_y;
 
@@ -25,4 +25,4 @@ for (var i=1; i<_num_points; i++) {
 		_cur_x = _next_x;
 		_cur_y = _next_y;
 	}
-}
+}*/
