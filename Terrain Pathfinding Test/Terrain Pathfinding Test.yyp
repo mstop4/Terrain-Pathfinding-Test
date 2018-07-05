@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "b492a15b-a499-4132-8405-726856bc7843",
+            "Value": {
+                "id": "9fcf2cd6-abae-42f0-bdd3-c20be77fb6c1",
+                "resourcePath": "scripts\\init_enums\\init_enums.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b9286f0f-7fff-4748-8749-c2f346a198c1",
             "Value": {
                 "id": "334e0fa0-b466-409a-a31e-0b8eefefc035",
@@ -345,7 +353,8 @@
     ],
     "script_order": [
         "b1d48064-a28a-4856-b788-66c2f0e73f82",
-        "649bd907-aedf-4f4f-a75d-519652d7036b"
+        "649bd907-aedf-4f4f-a75d-519652d7036b",
+        "b492a15b-a499-4132-8405-726856bc7843"
     ],
     "tutorial": ""
 }
