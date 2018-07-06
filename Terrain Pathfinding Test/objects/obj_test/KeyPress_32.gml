@@ -1,2 +1,4 @@
-var result = collision_line_tile(1,5,6,2,1,ter_tilemap);
-show_debug_message(result[0]);
+var n = encode_coords(2,2);
+show_debug_message(n);
+var m = decode_coords(n);
+show_debug_message(string(m[0]) + ", " + string(m[1]));
