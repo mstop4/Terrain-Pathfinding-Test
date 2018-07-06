@@ -1,1 +1,1 @@
-path_delete(my_path);
+path_delete(my_goto_path);

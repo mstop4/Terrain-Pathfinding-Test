@@ -1,5 +1,4 @@
 enum unitState {
 	idle,
-	moving,
-	settling
+	moving
 }

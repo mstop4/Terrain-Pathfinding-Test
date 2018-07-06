@@ -1,8 +1,8 @@
 {
-    "id": "b1d48064-a28a-4856-b788-66c2f0e73f82",
+    "id": "bc403a89-6932-4934-9736-4dcfcdfe5843",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "prune_path",
+    "name": "decode_coords",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -1,6 +1,6 @@
-if (path_exists(my_path)) {
+/*if (path_exists(my_path)) {
 	draw_path(my_path,0,0,true);
-}
+}*/
 
 if (selected)
-	draw_arrow(x,y-16,x,y,4);
+	draw_sprite(spr_arrow,0,x,y);

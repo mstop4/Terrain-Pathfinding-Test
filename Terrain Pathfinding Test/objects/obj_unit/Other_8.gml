@@ -1,1 +1,4 @@
-path_speed = 0;
+if (my_state == unitState.moving) {
+	my_state = unitState.idle;
+	path_speed = 0;
+}
