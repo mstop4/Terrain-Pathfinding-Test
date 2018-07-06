@@ -1,4 +1,5 @@
-my_path = path_add();
+my_goto_path = path_add();
+my_settle_path = path_add();
 
 selected = false;
 my_state = unitState.idle;

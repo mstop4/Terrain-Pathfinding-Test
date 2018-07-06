@@ -5,7 +5,7 @@ grid_width = room_width div CELL_SIZE;
 grid_height = room_height div CELL_SIZE;
 mp_grid = mp_grid_create(0,0,grid_width,grid_height,CELL_SIZE,CELL_SIZE);
 
-repeat(100) {
+repeat(5) {
 	instance_create_layer(320,180,"Instances",obj_unit);
 }
 

@@ -1,6 +1,7 @@
 if (my_state == unitState.moving) {
 	my_state = unitState.settling;
-	build_path(settle_x,settle_y);
+	path_start(my_settle_path,my_speed,path_action_stop,true);
+	
 }
 
 else if (my_state == unitState.settling) {

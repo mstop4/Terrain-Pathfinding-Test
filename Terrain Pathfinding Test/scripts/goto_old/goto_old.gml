@@ -31,7 +31,7 @@ if (spiral_x > 0 && spiral_x < grid_width &&
 		
 			with (cur_unit) {
 				my_state = unitState.moving;
-				build_path(goal_x,goal_y);
+				build_goto_path(goal_x,goal_y);
 				settle_x = _settle_x;
 				settle_y = _settle_y;
 			}
@@ -65,7 +65,7 @@ while (true) {
 				
 					with (cur_unit) {
 						my_state = unitState.moving;
-						build_path(goal_x,goal_y);
+						build_goto_path(goal_x,goal_y);
 						settle_x = _settle_x;
 						settle_y = _settle_y;
 					}
@@ -99,7 +99,7 @@ while (true) {
 				
 					with (cur_unit) {
 						my_state = unitState.moving;
-						build_path(goal_x,goal_y);
+						build_goto_path(goal_x,goal_y);
 						settle_x = _settle_x;
 						settle_y = _settle_y;
 					}

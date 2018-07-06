@@ -319,7 +319,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\/build_path\/build_path.yy",
+                "resourcePath": "scripts\/build_goto_path\/build_goto_path.yy",
                 "resourceType": "GMScript"
             }
         },

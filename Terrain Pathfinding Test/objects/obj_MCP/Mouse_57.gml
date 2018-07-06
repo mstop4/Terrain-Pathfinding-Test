@@ -23,31 +23,24 @@ if (spiral_x > 0 && spiral_x < grid_width &&
 	tile_info = tilemap_get(ter_tilemap,spiral_x,spiral_y);
 	tile_index = tile_get_index(tile_info);
 			
-	if (tile_index != 1) {
-		_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
-		_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
-		temp_path = mp_grid_path(mp_grid,temp_path,goal_x,goal_y,_settle_x,_settle_y,true);
-		dist_to_settle = point_distance(_settle_x,_settle_y,goal_x,goal_y);
+	if (tile_index != 1) {		
+		cur_unit = instance_find(obj_unit,unit_count);
 		
-		if (path_get_length(temp_path) < dist_to_settle * 4) {
-			cur_unit = instance_find(obj_unit,unit_count);
-		
-			with (cur_unit) {
-				my_state = unitState.moving;
-				build_path(goal_x,goal_y);
-				settle_x = _settle_x;
-				settle_y = _settle_y;
-			}
-		
-			unit_count++;
-			
-			if (unit_count >= num_units)
-				exit;
+		with (cur_unit) {
+			my_state = unitState.moving;
+			build_goto_path(goal_x,goal_y);
+			path_clear_points(my_settle_path);
 		}
+		
+		unit_count++;
+			
+		if (unit_count >= num_units)
+			exit;
 	}
 }
 
 while (true) {
+	
 	// horizontal
 	for (var i=0; i<spiral_dist; i++) {
 		spiral_x += spiral_dir;
@@ -69,9 +62,8 @@ while (true) {
 				
 					with (cur_unit) {
 						my_state = unitState.moving;
-						build_path(goal_x,goal_y);
-						settle_x = _settle_x;
-						settle_y = _settle_y;
+						build_goto_path(goal_x,goal_y);
+						path_assign(my_settle_path,temp_path);
 					}
 				
 					unit_count++;
@@ -101,14 +93,11 @@ while (true) {
 		
 				if (path_get_length(temp_path) < dist_to_settle * 4) {
 					cur_unit = instance_find(obj_unit,unit_count);
-					_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
-					_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
 				
 					with (cur_unit) {
 						my_state = unitState.moving;
-						build_path(goal_x,goal_y);
-						settle_x = _settle_x;
-						settle_y = _settle_y;
+						build_goto_path(goal_x,goal_y);
+						path_assign(my_settle_path,temp_path);
 					}
 				
 					unit_count++;
