@@ -12,7 +12,7 @@ var _settle_y = goal_y;
 
 var num_units = instance_number(obj_unit);
 var unit_count = 0;
-var cur_unit, tile_info, tile_index, dist_to_settle, path_length;
+var cur_unit, tile_info, tile_index, dist_to_settle, path_length, success;
 
 var temp_path = path_add();
 
@@ -54,25 +54,26 @@ while (true) {
 			if (tile_index != 1) {
 				_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
 				_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
-				temp_path = mp_grid_path(mp_grid,temp_path,goal_x,goal_y,_settle_x,_settle_y,true);
-				dist_to_settle = point_distance(_settle_x,_settle_y,goal_x,goal_y);
-				path_length = path_get_length(temp_path);
+				success = mp_grid_path(mp_grid,temp_path,goal_x,goal_y,_settle_x,_settle_y,true);
 				
-				show_debug_message(string(path_length) + " - " + string(dist_to_settle*4));
+				if (success) {
+					dist_to_settle = point_distance(_settle_x,_settle_y,goal_x,goal_y);
+					path_length = path_get_length(temp_path);
 		
-				if (path_length < dist_to_settle * 4) {
-					cur_unit = instance_find(obj_unit,unit_count);
+					if (path_length < dist_to_settle * 4) {
+						cur_unit = instance_find(obj_unit,unit_count);
 				
-					with (cur_unit) {
-						my_state = unitState.moving;
-						build_goto_path(goal_x,goal_y);
-						path_assign(my_settle_path,temp_path);
-					}
+						with (cur_unit) {
+							my_state = unitState.moving;
+							build_goto_path(goal_x,goal_y);
+							path_assign(my_settle_path,temp_path);
+						}
 				
-					unit_count++;
+						unit_count++;
 			
-					if (unit_count >= num_units)
-						exit;
+						if (unit_count >= num_units)
+							exit;
+					}
 				}
 			}
 		}
@@ -91,25 +92,26 @@ while (true) {
 			if (tile_index != 1) {
 				_settle_x = spiral_x * CELL_SIZE + CELL_SIZE / 2;
 				_settle_y = spiral_y * CELL_SIZE + CELL_SIZE / 2;
-				temp_path = mp_grid_path(mp_grid,temp_path,goal_x,goal_y,_settle_x,_settle_y,true);
-				dist_to_settle = point_distance(_settle_x,_settle_y,goal_x,goal_y);
-				path_length = path_get_length(temp_path);
+				success = mp_grid_path(mp_grid,temp_path,goal_x,goal_y,_settle_x,_settle_y,true);
 				
-				show_debug_message(string(path_length) + " - " + string(dist_to_settle*4));
+				if (success) {
+					dist_to_settle = point_distance(_settle_x,_settle_y,goal_x,goal_y);
+					path_length = path_get_length(temp_path);
 		
-				if (path_length < dist_to_settle * 4) {
-					cur_unit = instance_find(obj_unit,unit_count);
+					if (path_length < dist_to_settle * 4) {
+						cur_unit = instance_find(obj_unit,unit_count);
 				
-					with (cur_unit) {
-						my_state = unitState.moving;
-						build_goto_path(goal_x,goal_y);
-						path_assign(my_settle_path,temp_path);
-					}
+						with (cur_unit) {
+							my_state = unitState.moving;
+							build_goto_path(goal_x,goal_y);
+							path_assign(my_settle_path,temp_path);
+						}
 				
-					unit_count++;
+						unit_count++;
 			
-					if (unit_count >= num_units)
-						exit;
+						if (unit_count >= num_units)
+							exit;
+					}
 				}
 			}
 		}
