@@ -59,7 +59,7 @@ if (spiral_x > 0 && spiral_x < grid_width &&
 							dist_to_settle = point_distance(_settle_x,_settle_y,goal_x,goal_y);
 							path_length = path_get_length(temp_path);
 		
-							if (path_length < dist_to_settle * 4) {
+							if (path_length < dist_to_settle * path_factor) {
 								cur_unit = instance_find(obj_unit,unit_count);
 				
 								with (cur_unit) {
@@ -97,7 +97,7 @@ if (spiral_x > 0 && spiral_x < grid_width &&
 							dist_to_settle = point_distance(_settle_x,_settle_y,goal_x,goal_y);
 							path_length = path_get_length(temp_path);
 		
-							if (path_length < dist_to_settle * 4) {
+							if (path_length < dist_to_settle * path_factor) {
 								cur_unit = instance_find(obj_unit,unit_count);
 				
 								with (cur_unit) {
