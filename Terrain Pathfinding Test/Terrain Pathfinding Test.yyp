@@ -127,14 +127,6 @@
             }
         },
         {
-            "Key": "555beef4-ec63-4ccf-8bbd-a6b3730b6930",
-            "Value": {
-                "id": "b87bc948-07b3-4b6e-b8fa-c4368068238f",
-                "resourcePath": "scripts\\goto_old2\\goto_old2.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "5d7e22bb-46fd-4189-8d18-93f0437851a3",
             "Value": {
                 "id": "4cb6e4bf-ec2c-4c2b-b343-cc3fd8f4323f",
@@ -223,14 +215,6 @@
             }
         },
         {
-            "Key": "8f5d978b-a1c3-460d-aab7-e4cbe4472218",
-            "Value": {
-                "id": "3d8df070-6493-40bf-9f89-4c4ef46845a3",
-                "resourcePath": "scripts\/goto_old\/goto_old.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "97cfc43c-01bc-46af-b038-6211e05e7358",
             "Value": {
                 "id": "a8bbd1d7-0b82-4492-a942-2826a99588e3",
@@ -276,14 +260,6 @@
                 "id": "11cb1dec-2537-40cb-9509-ba2a7a8ec620",
                 "resourcePath": "rooms\/room1\/room1.yy",
                 "resourceType": "GMRoom"
-            }
-        },
-        {
-            "Key": "b1d48064-a28a-4856-b788-66c2f0e73f82",
-            "Value": {
-                "id": "0b7e357a-399f-4b6b-bb93-d259dae9f82d",
-                "resourcePath": "scripts\/prune_path\/prune_path.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -424,13 +400,10 @@
         }
     ],
     "script_order": [
-        "b1d48064-a28a-4856-b788-66c2f0e73f82",
         "649bd907-aedf-4f4f-a75d-519652d7036b",
         "b492a15b-a499-4132-8405-726856bc7843",
         "b2b8f967-0810-4b87-846a-a65dbc397162",
         "d9d78e48-7e1d-4fc7-be53-a7d3b0b41292",
-        "8f5d978b-a1c3-460d-aab7-e4cbe4472218",
-        "555beef4-ec63-4ccf-8bbd-a6b3730b6930",
         "e0f8ec4f-d9fd-410e-8ef7-41469b6feaff",
         "bc403a89-6932-4934-9736-4dcfcdfe5843",
         "dcf3ef63-7336-499e-b0b0-f38da29f5da2"

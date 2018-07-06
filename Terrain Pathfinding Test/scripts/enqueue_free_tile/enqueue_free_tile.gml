@@ -21,6 +21,7 @@ if (_x >= 0 && _x < _w &&
 	
 	if (ds_list_find_index(_vl,_ec) == -1) {
 		
+		ds_list_add(_vl, _ec);
 		var _tile_info = tilemap_get(_tilemap,_x,_y);
 
 		if (tile_get_index(_tile_info) != 1) {
