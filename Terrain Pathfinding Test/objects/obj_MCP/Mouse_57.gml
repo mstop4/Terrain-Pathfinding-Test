@@ -61,6 +61,7 @@ while (!ds_queue_empty(_selected_queue)) {
 		}
 		
 		_existing_unit = instance_position(_goto_x, _goto_y, obj_unit);
+		
 		if (_existing_unit != noone && _existing_unit.my_state == unitState.idle) {
 			_settle_tile_enc = ds_queue_dequeue(_settle_queue);
 			_settle_tile_dec = decode_coords(_settle_tile_enc);

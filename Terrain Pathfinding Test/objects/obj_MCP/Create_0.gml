@@ -1,5 +1,6 @@
 #macro CELL_SIZE 16
 display_set_gui_maximize(2,2,0,0);
+init_enums();
 
 grid_width = room_width div CELL_SIZE;
 grid_height = room_height div CELL_SIZE;
