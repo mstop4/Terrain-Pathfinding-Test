@@ -113,6 +113,20 @@
             "value": "5",
             "varName": "los",
             "varType": 0
+        },
+        {
+            "id": "a6a45426-162f-4220-b8cd-a29762c48f89",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "$FF41B200",
+            "varName": "my_colour",
+            "varType": 7
         }
     ],
     "solid": false,

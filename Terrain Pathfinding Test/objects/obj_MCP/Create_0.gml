@@ -10,6 +10,11 @@ repeat(100) {
 	instance_create_layer(320,180,"Instances",obj_unit);
 }
 
+/*repeat(10) {
+	var u = instance_create_layer(320,196,"Instances",obj_unit);
+	u.image_blend = $d35600;
+}*/
+
 selecting = false;
 select_start_x = 0;
 select_start_y = 0;
