@@ -5,8 +5,9 @@ init_enums();
 grid_width = room_width div CELL_SIZE;
 grid_height = room_height div CELL_SIZE;
 mp_grid = mp_grid_create(0,0,grid_width,grid_height,CELL_SIZE,CELL_SIZE);
+mp_grid_ds = ds_grid_create(grid_width,grid_height);
 
-repeat(9) {
+repeat(100) {
 	instance_create_layer(320,180,"Instances",obj_unit);
 }
 

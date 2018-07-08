@@ -58,9 +58,9 @@ while (!ds_queue_empty(_selected_queue)) {
 		var _existing_unit = _occupied_grid[# _cur_tile_dec[0], _cur_tile_dec[1]];
 		if (_existing_unit != 0) {
 			with (_existing_unit) {
-				ds_grid_copy(my_settle_grid, _occupied_grid);
+				ds_grid_copy(my_settle_grid,other.mp_grid_ds);
 				ds_queue_enqueue(settle_process_queue,encode_coords(_cur_tile_dec[0], _cur_tile_dec[1]));
-				var result = find_settle_tile(other.grid_width,other.grid_height,my_settle_grid,settle_process_queue,other.ter_tilemap);
+				var result = find_settle_tile(other.grid_width,other.grid_height,my_settle_grid,_occupied_grid,settle_process_queue,other.ter_tilemap);
 			
 				if (result[0] != -1) {
 					_occupied_grid[# result[0], result[1]] = id;

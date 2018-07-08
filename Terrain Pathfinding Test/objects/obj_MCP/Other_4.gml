@@ -13,3 +13,5 @@ for (var i=0; i<grid_width; i++) {
 		}
 	}
 }
+
+mp_grid_to_ds_grid(mp_grid,mp_grid_ds);
