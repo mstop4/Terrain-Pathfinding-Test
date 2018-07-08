@@ -16,3 +16,5 @@ if (success) {
 	path_set_precision(my_goto_path,8);
 	path_start(my_goto_path,my_speed,path_action_stop,true);
 }
+
+return success;
