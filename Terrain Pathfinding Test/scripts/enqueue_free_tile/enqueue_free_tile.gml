@@ -2,7 +2,7 @@
 /// @arg y
 /// @arg width
 /// @arg height
-/// @arg visted_grid
+/// @arg visited_grid
 /// @arg free_queue
 /// @arg tilemap
 

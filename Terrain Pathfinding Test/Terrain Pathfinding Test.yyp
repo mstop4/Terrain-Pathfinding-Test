@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "293f2bcc-ff83-4a06-b8fe-fbb215907d45",
+            "Value": {
+                "id": "1ddb4aa4-5bca-4186-8a3d-125c2958ac3a",
+                "resourcePath": "scripts\\find_settle_tile\\find_settle_tile.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "29aa07e8-44c0-4f85-a7a6-ea3a62ed6c85",
             "Value": {
                 "id": "941a738e-0e08-4533-8bfb-1a1d7bef8caa",
@@ -303,6 +311,14 @@
             }
         },
         {
+            "Key": "cbd6da0f-24d0-4dd1-9c0e-1284de1335fd",
+            "Value": {
+                "id": "5de724c1-d446-4777-8d78-7fb426e479e9",
+                "resourcePath": "views\\b0fa5bda-c2b1-4c49-b349-9af1935f7bf0-room.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "37575d0e-1ada-4d34-91e1-b3e53d272e6e",
@@ -324,6 +340,14 @@
                 "id": "c9f54277-0a68-4625-81aa-46f5a5d9c713",
                 "resourcePath": "scripts\/collision_line_tile\/collision_line_tile.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "dc9c4083-2585-41ef-aa6d-f3bc032b3cb8",
+            "Value": {
+                "id": "e5fc44d4-8be2-4c41-ba51-a90ccbadf603",
+                "resourcePath": "rooms\\room1_Child_0\\room1_Child_0.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -415,6 +439,7 @@
         "e0f8ec4f-d9fd-410e-8ef7-41469b6feaff",
         "bc403a89-6932-4934-9736-4dcfcdfe5843",
         "dcf3ef63-7336-499e-b0b0-f38da29f5da2",
+        "293f2bcc-ff83-4a06-b8fe-fbb215907d45",
         "e2a07cb8-6e19-4f3b-b0f5-d164325a0b49"
     ],
     "tutorial": ""
