@@ -5,4 +5,4 @@
 if (selected)
 	draw_sprite(spr_arrow,0,x,y);
 	
-//draw_text(x,y,string(my_state));
+draw_text(x,y,string(my_state));

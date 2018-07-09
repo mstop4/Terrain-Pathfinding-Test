@@ -3,6 +3,7 @@
 /// @arg settle_grid
 /// @arg occupied_grid
 /// @arg settle_queue
+/// @arg cur_unit_goal
 /// @arg tilemap
 
 var _w = argument[0];
@@ -10,7 +11,8 @@ var _h = argument[1];
 var _sg = argument[2];
 var _og = argument[3]
 var _sq = argument[4];
-var _tilemap = argument[5];
+var _cug = argument[5];
+var _tilemap = argument[6];
 
 var _dec, _x, _y;
 
@@ -22,7 +24,8 @@ while (!ds_queue_empty(_sq)) {
 	var _tile_info = tilemap_get(_tilemap,_x,_y);
 
 	if (tile_get_index(_tile_info) != 1 &&
-		_og[# _x, _y] == 0) {
+		_og[# _x, _y] == 0 &&
+		(_x != _cug[0] && _y != _cug[1])) {
 			
 		ds_queue_clear(_sq);
 		return [_x, _y];
