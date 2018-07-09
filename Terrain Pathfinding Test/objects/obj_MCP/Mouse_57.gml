@@ -12,6 +12,7 @@ var _settle_tile_enc, _settle_tile_dec, _existing_unit;
 
 var _tile_info, _tile_index;
 ds_queue_enqueue(_free_queue,encode_coords(_goal_tile_x,_goal_tile_y));
+print("\n========");
 
 with (obj_unit) {
 	if (selected) {
@@ -57,9 +58,8 @@ while (!ds_queue_empty(_selected_queue)) {
 			var _x = (_cur_unit.x - CELL_SIZE / 2) div CELL_SIZE;
 			var _y = (_cur_unit.y - CELL_SIZE / 2) div CELL_SIZE;
 			_visited_grid[# _cur_tile_dec[0], _cur_tile_dec[1]] = 1;
-			print("============");
+			print("\n----------");
 			print("Cur vacating: ", _x, ", ", _y);
-			_occupied_grid[# _x, _y] = 0;
 			
 			var _existing_unit = _occupied_grid[# _cur_tile_dec[0], _cur_tile_dec[1]];
 			
