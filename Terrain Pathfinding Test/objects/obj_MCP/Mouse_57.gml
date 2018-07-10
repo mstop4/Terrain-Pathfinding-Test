@@ -10,7 +10,7 @@ var _occupied_grid = ds_grid_create(grid_width,grid_height);
 var _cur_tile_enc, _cur_tile_dec, _cur_unit;
 var _settle_tile_enc, _settle_tile_dec, _existing_unit;
 
-var _tile_info, _tile_index;
+var _tile_index;
 ds_queue_enqueue(_free_queue,encode_coords(_goal_tile_x,_goal_tile_y));
 
 with (obj_unit) {
@@ -39,8 +39,7 @@ while (!ds_queue_empty(_selected_queue)) {
 	_cur_tile_enc = ds_queue_dequeue(_free_queue);
 	_cur_tile_dec = decode_coords(_cur_tile_enc);
 
-	_tile_info = tilemap_get(ter_tilemap,_cur_tile_dec[0],_cur_tile_dec[1]);
-	_tile_index = tile_get_index(_tile_info);
+	_tile_index = get_tile_index(ter_tilemap,_cur_tile_dec[0],_cur_tile_dec[1]);
 	
 	if (_tile_index != 1) {
 		_cur_unit = ds_queue_dequeue(_selected_queue);
