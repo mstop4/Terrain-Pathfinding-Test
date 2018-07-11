@@ -77,20 +77,6 @@
             "varType": 0
         },
         {
-            "id": "72130f8d-39de-4443-b116-21c61b86ad11",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "1",
-            "varName": "push_force",
-            "varType": 0
-        },
-        {
             "id": "3643494a-74f7-41d0-b357-7742e27b7b65",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -117,6 +103,20 @@
             "value": "$FF41B200",
             "varName": "my_colour",
             "varType": 7
+        },
+        {
+            "id": "41ee4af0-ce75-4af8-953a-888b5d11d5ac",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": true,
+            "rangeMax": 4,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "my_team",
+            "varType": 1
         }
     ],
     "solid": false,
