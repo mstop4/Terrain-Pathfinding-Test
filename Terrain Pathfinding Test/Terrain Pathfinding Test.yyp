@@ -72,7 +72,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_fog\/spr_fog.yy",
+                "resourcePath": "sprites\/spr_fog1\/spr_fog1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1005,25 +1005,6 @@
                 ],
                 "resourcePath": "options\/mac\/options_mac.yy",
                 "resourceType": "GMMacOptions"
-            }
-        },
-        {
-            "Key": "f597a2b2-2294-4f53-a6cd-b258e6eb14f7",
-            "Value": {
-                "id": "9d0aa11d-f177-4ecb-b9b4-ccabea8d36a9",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "tilesets\/ts_fog\/ts_fog.yy",
-                "resourceType": "GMTileSet"
             }
         },
         {
