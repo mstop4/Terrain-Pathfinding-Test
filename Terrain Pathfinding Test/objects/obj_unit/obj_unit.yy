@@ -53,6 +53,16 @@
             "enumb": 0,
             "eventtype": 2,
             "m_owner": "97cfc43c-01bc-46af-b038-6211e05e7358"
+        },
+        {
+            "id": "3ea2638e-6e98-4b56-9146-b8ceedb3bb50",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "97cfc43c-01bc-46af-b038-6211e05e7358"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -98,6 +108,20 @@
             "resourceFilter": 1023,
             "value": "5",
             "varName": "los",
+            "varType": 0
+        },
+        {
+            "id": "0c18fa00-ade2-4d5a-9959-6be41d0186ce",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "16",
+            "varName": "attack_range",
             "varType": 0
         },
         {

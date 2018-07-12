@@ -24,7 +24,7 @@ for (var i=12; i<22; i++) {
 for (var i=0; i<2; i++) {
 	for (var j=0; j<2; j++) {
 		var u = instance_create_layer(i * CELL_SIZE + CELL_SIZE / 2,j * CELL_SIZE + CELL_SIZE / 2,"Instances",obj_unit);
-		u.my_team = 2;
+		u.my_team = player_team;
 	}
 }
 

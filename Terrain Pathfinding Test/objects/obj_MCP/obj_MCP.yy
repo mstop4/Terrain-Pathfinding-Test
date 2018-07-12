@@ -132,7 +132,20 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        
+        {
+            "id": "99ed17d0-a1ba-43bd-9047-17e172824fec",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": true,
+            "rangeMax": 4,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "2",
+            "varName": "player_team",
+            "varType": 1
+        }
     ],
     "solid": false,
     "spriteId": "00000000-0000-0000-0000-000000000000",

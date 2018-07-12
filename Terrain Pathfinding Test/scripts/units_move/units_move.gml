@@ -2,19 +2,20 @@
 /// @arg free_queue
 /// @arg visited_grid
 /// @arg occupied_grid
+/// @arg my_team
 
 var _selected_queue = argument[0];
 var _free_queue = argument[1];
 var _visited_grid = argument[2];
 var _occupied_grid = argument[3];
-
+var _my_team = argument[4];
 
 var _goto_x, _goto_y;
 var _cur_tile_enc, _cur_tile_dec, _cur_unit;
 var _settle_tile_enc, _settle_tile_dec, _existing_unit;
 var _tile_index;
 
-while (!ds_queue_empty(_selected_queue)) {
+while (!ds_queue_empty(_selected_queue) && !ds_queue_empty(_free_queue)) {
 	
 	_cur_tile_enc = ds_queue_dequeue(_free_queue);
 	_cur_tile_dec = decode_coords(_cur_tile_enc);
@@ -33,13 +34,15 @@ while (!ds_queue_empty(_selected_queue)) {
 		}
 		
 		if (_result) {
+			is_attacking = false;
+			target_unit = noone;
 			var _x = (_cur_unit.x - CELL_SIZE / 2) div CELL_SIZE;
 			var _y = (_cur_unit.y - CELL_SIZE / 2) div CELL_SIZE;
 			_visited_grid[# _cur_tile_dec[0], _cur_tile_dec[1]] = 1;
 			
 			var _existing_unit = _occupied_grid[# _cur_tile_dec[0], _cur_tile_dec[1]];
 			
-			if (_existing_unit != 0) {
+			if (_existing_unit != 0 && _existing_unit.my_team == _my_team) {
 				with (_existing_unit) {
 					ds_grid_copy(my_settle_grid,other.mp_grid_ds);
 					ds_queue_enqueue(settle_process_queue,encode_coords(_cur_tile_dec[0], _cur_tile_dec[1]));

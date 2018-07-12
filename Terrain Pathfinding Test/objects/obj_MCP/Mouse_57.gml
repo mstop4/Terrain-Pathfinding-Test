@@ -30,7 +30,13 @@ with (obj_unit) {
 	}
 }
 
-units_move(_selected_queue, _free_queue, _visited_grid, _occupied_grid);
+if (hover_unit && hover_unit.my_team != player_team) {
+	units_attack(_selected_queue, hover_unit);
+}
+
+else {
+	units_move(_selected_queue, _free_queue, _visited_grid, _occupied_grid, player_team);
+}
 
 ds_queue_destroy(_free_queue);
 ds_queue_destroy(_selected_queue);

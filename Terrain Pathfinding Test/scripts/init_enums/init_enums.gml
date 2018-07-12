@@ -1,5 +1,6 @@
 enum unitState {
 	idle,
 	ready,
-	moving
+	moving,
+	attacking
 }
