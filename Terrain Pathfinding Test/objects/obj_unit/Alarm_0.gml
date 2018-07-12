@@ -1,0 +1,1 @@
+image_blend = global.teamColours[my_team];

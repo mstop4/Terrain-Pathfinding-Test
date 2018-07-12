@@ -43,6 +43,16 @@
             "enumb": 8,
             "eventtype": 7,
             "m_owner": "97cfc43c-01bc-46af-b038-6211e05e7358"
+        },
+        {
+            "id": "5b180a0b-89eb-43b1-add4-631e49d3447a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 2,
+            "m_owner": "97cfc43c-01bc-46af-b038-6211e05e7358"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -91,20 +101,6 @@
             "varType": 0
         },
         {
-            "id": "a6a45426-162f-4220-b8cd-a29762c48f89",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "$FF41B200",
-            "varName": "my_colour",
-            "varType": 7
-        },
-        {
             "id": "41ee4af0-ce75-4af8-953a-888b5d11d5ac",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -114,7 +110,7 @@
             "rangeMax": 4,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
+            "value": "1",
             "varName": "my_team",
             "varType": 1
         }
