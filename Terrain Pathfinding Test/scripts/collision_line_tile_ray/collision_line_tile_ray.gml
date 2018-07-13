@@ -43,7 +43,7 @@ if (_abs_dx <> 0)
 		{
 			_cur_x = _sign_dx * i;
 			
-			_tile_info = tilemap_get(_tm,_x+_cur_x,_y+_cur_y);
+			_tile_info = tilemap_get_at_pixel(_tm,_x+_cur_x,_y+_cur_y);
 			_tile_index = tile_get_index(_tile_info);
 
 			if (_tile_index == _v)
@@ -76,7 +76,7 @@ if (_abs_dx <> 0)
 		{
 			_cur_y = _sign_dy * i;
 			
-			_tile_info = tilemap_get(_tm,_x+_cur_x,_y+_cur_y);
+			_tile_info = tilemap_get_at_pixel(_tm,_x+_cur_x,_y+_cur_y);
 			_tile_index = tile_get_index(_tile_info);
 			
 			if (_tile_index == _v)
@@ -110,7 +110,7 @@ else
 	{
 		_cur_y = _sign_dy * i;
 		
-		_tile_info = tilemap_get(_tm,_x+_cur_x,_y+_cur_y);
+		_tile_info = tilemap_get_at_pixel(_tm,_x+_cur_x,_y+_cur_y);
 		_tile_index = tile_get_index(_tile_info);
 		
 		if (_tile_index == _v)

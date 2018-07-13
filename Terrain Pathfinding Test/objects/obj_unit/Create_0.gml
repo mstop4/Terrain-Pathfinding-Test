@@ -7,7 +7,7 @@ target_unit = noone;
 fight_slot = -1;
 
 attacker_list = ds_list_create();
-num_engaged = 0;
+cur_fight_slot = -1;
 fight_circle_angle = 0;
 
 selected = false;

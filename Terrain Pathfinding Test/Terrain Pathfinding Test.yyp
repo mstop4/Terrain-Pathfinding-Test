@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "456b5191-4d6f-484f-8dad-8ad4a0cc7259",
+            "Value": {
+                "id": "ad939964-eda0-4586-9fce-9331cdfbc050",
+                "resourcePath": "scripts\\instance_meeting_tile\\instance_meeting_tile.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4cd87af4-0c7b-41be-b116-7c39a2daf4e6",
             "Value": {
                 "id": "dca7d74c-11d5-4135-82bb-3f1a79825266",
@@ -327,6 +335,14 @@
             }
         },
         {
+            "Key": "b9c8b394-e770-431b-bf4b-b5babaa08068",
+            "Value": {
+                "id": "efbc124c-7f56-4e66-95f9-ba1a6359a6d0",
+                "resourcePath": "scripts\\wrap\\wrap.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bc403a89-6932-4934-9736-4dcfcdfe5843",
             "Value": {
                 "id": "fabbaece-b700-4b10-90db-d3b1b47f55a7",
@@ -477,7 +493,9 @@
         "f2e1dc8c-8410-491c-9d65-5a714dae1c62",
         "b171f75f-74e5-48d3-92f1-489635780ae6",
         "7ac25901-bbe6-430b-8275-27afcbf38d6b",
-        "7c990982-dd6c-4826-acc6-29c717528bc3"
+        "7c990982-dd6c-4826-acc6-29c717528bc3",
+        "b9c8b394-e770-431b-bf4b-b5babaa08068",
+        "456b5191-4d6f-484f-8dad-8ad4a0cc7259"
     ],
     "tutorial": ""
 }

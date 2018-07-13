@@ -13,13 +13,29 @@ while (!ds_queue_empty(_selected_queue) ) {
 	
 		if (_result) {
 			is_attacking = true;
+			
+			if (target_unit != noone) {
+				var _my_index = ds_list_find_index(target_unit.attacker_list, id);
+				if (_my_index != -1)
+					ds_list_delete(target_unit.attacker_list, _my_index);
+			}
+			
 			target_unit = _target_unit;
-			ds_list_add(_target_unit.attacker_list, id);
+			
+			if (ds_list_find_index(_target_unit.attacker_list, id) == -1)
+				ds_list_add(_target_unit.attacker_list, id);
 		}
 	
 		else {
 			is_attacking = false;
-			target_unit = _target_unit;
+			
+			if (target_unit != noone) {
+				var _my_index = ds_list_find_index(target_unit.attacker_list, id);
+				if (_my_index != -1)
+					ds_list_delete(target_unit.attacker_list, _my_index);
+			}
+			
+			target_unit = noone;
 		}
 	}
 }
