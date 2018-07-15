@@ -27,7 +27,7 @@ while (!ds_queue_empty(_selected_queue) && !ds_queue_empty(_free_queue)) {
 		_cur_unit.is_attacking = false;
 		
 		if (_cur_unit.target_unit != noone) {
-			var _my_index = ds_list_find_index(_cur_unit.target_unit.attacker_list, id);
+			var _my_index = ds_list_find_index(_cur_unit.target_unit.attacker_list, _cur_unit);
 			if (_my_index != -1)
 				ds_list_delete(_cur_unit.target_unit.attacker_list, _my_index);
 		}
