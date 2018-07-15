@@ -30,5 +30,6 @@ with (_current_unit) {
 		}
 				
 		my_state = unitState.attacking;
+		alarm[1] = attack_startup;
 	}
 }
