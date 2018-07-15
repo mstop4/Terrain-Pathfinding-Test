@@ -1,20 +1,18 @@
-var _goal_tile_x = (mouse_x div CELL_SIZE);
-var _goal_tile_y = (mouse_y div CELL_SIZE);
+var _goal_tile_x = (x div CELL_SIZE);
+var _goal_tile_y = (y div CELL_SIZE);
 
 var _num_units = 0;
 var _selected_queue = ds_queue_create();
 var _free_queue = ds_queue_create();
-var _visited_grid = ds_grid_create(grid_width,grid_height);
-var _occupied_grid = ds_grid_create(grid_width,grid_height);
+var _visited_grid = ds_grid_create(obj_MCP.grid_width,obj_MCP.grid_height);
+var _occupied_grid = ds_grid_create(obj_MCP.grid_width,obj_MCP.grid_height);
 
 ds_queue_enqueue(_free_queue,encode_coords(_goal_tile_x,_goal_tile_y));
 
 with (obj_unit) {
-	if (selected) {
+	if (ds_list_find_index(other.attacker_list,id) != -1) {
 		ds_queue_enqueue(_selected_queue,id);
 		my_state = unitState.ready;
-		alarm[1] = -1;
-		alarm[2] = -1;
 	}
 	
 	else {
@@ -32,13 +30,7 @@ with (obj_unit) {
 	}
 }
 
-if (hover_unit && hover_unit.my_team != player_team) {
-	units_attack(_selected_queue, hover_unit);
-}
-
-else {
-	units_move(_selected_queue, _free_queue, _visited_grid, _occupied_grid);
-}
+units_move(_selected_queue, _free_queue, _visited_grid, _occupied_grid);
 
 ds_queue_destroy(_free_queue);
 ds_queue_destroy(_selected_queue);

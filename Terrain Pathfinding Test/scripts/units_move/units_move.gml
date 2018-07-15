@@ -2,13 +2,11 @@
 /// @arg free_queue
 /// @arg visited_grid
 /// @arg occupied_grid
-/// @arg my_team
 
 var _selected_queue = argument[0];
 var _free_queue = argument[1];
 var _visited_grid = argument[2];
 var _occupied_grid = argument[3];
-var _my_team = argument[4];
 
 var _goto_x, _goto_y;
 var _cur_tile_enc, _cur_tile_dec, _cur_unit;
@@ -20,7 +18,7 @@ while (!ds_queue_empty(_selected_queue) && !ds_queue_empty(_free_queue)) {
 	_cur_tile_enc = ds_queue_dequeue(_free_queue);
 	_cur_tile_dec = decode_coords(_cur_tile_enc);
 
-	_tile_index = get_tile_index(ter_tilemap,_cur_tile_dec[0],_cur_tile_dec[1]);
+	_tile_index = get_tile_index(obj_MCP.ter_tilemap,_cur_tile_dec[0],_cur_tile_dec[1]);
 	
 	if (_tile_index != 1) {
 		_cur_unit = ds_queue_dequeue(_selected_queue);
@@ -50,11 +48,11 @@ while (!ds_queue_empty(_selected_queue) && !ds_queue_empty(_free_queue)) {
 			
 			var _existing_unit = _occupied_grid[# _cur_tile_dec[0], _cur_tile_dec[1]];
 			
-			if (_existing_unit != 0 && _existing_unit.my_team == _my_team) {
+			if (_existing_unit != 0 && _existing_unit.my_team == _cur_unit.my_team) {
 				with (_existing_unit) {
 					ds_grid_copy(my_settle_grid,other.mp_grid_ds);
 					ds_queue_enqueue(settle_process_queue,encode_coords(_cur_tile_dec[0], _cur_tile_dec[1]));
-					_result = find_settle_tile(other.grid_width,other.grid_height,my_settle_grid,_occupied_grid,settle_process_queue,_cur_tile_dec,other.ter_tilemap);
+					_result = find_settle_tile(obj_MCP.grid_width,obj_MCP.grid_height,my_settle_grid,_occupied_grid,settle_process_queue,_cur_tile_dec,other.obj_MCP.ter_tilemap);
 			
 					if (_result[0] != -1) {
 						var _original_state = my_state;
@@ -84,8 +82,8 @@ while (!ds_queue_empty(_selected_queue) && !ds_queue_empty(_free_queue)) {
 		}
 	}
 	
-	enqueue_free_tile(_cur_tile_dec[0]-1,_cur_tile_dec[1],grid_width,grid_height,_visited_grid,_free_queue,ter_tilemap);
-	enqueue_free_tile(_cur_tile_dec[0],_cur_tile_dec[1]-1,grid_width,grid_height,_visited_grid,_free_queue,ter_tilemap);
-	enqueue_free_tile(_cur_tile_dec[0]+1,_cur_tile_dec[1],grid_width,grid_height,_visited_grid,_free_queue,ter_tilemap);
-	enqueue_free_tile(_cur_tile_dec[0],_cur_tile_dec[1]+1,grid_width,grid_height,_visited_grid,_free_queue,ter_tilemap);
+	enqueue_free_tile(_cur_tile_dec[0]-1,_cur_tile_dec[1],obj_MCP.grid_width,obj_MCP.grid_height,_visited_grid,_free_queue,obj_MCP.ter_tilemap);
+	enqueue_free_tile(_cur_tile_dec[0],_cur_tile_dec[1]-1,obj_MCP.grid_width,obj_MCP.grid_height,_visited_grid,_free_queue,obj_MCP.ter_tilemap);
+	enqueue_free_tile(_cur_tile_dec[0]+1,_cur_tile_dec[1],obj_MCP.grid_width,obj_MCP.grid_height,_visited_grid,_free_queue,obj_MCP.ter_tilemap);
+	enqueue_free_tile(_cur_tile_dec[0],_cur_tile_dec[1]+1,obj_MCP.grid_width,obj_MCP.grid_height,_visited_grid,_free_queue,obj_MCP.ter_tilemap);
 }
