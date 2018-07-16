@@ -17,7 +17,7 @@ while (!ds_queue_empty(_selected_queue) ) {
 			is_attacking = true;
 			
 			// remove self from previous attack target's list
-			if (target_unit != noone) {
+			if (instance_exists(target_unit)) {
 				var _my_index = ds_list_find_index(target_unit.attacker_list, id);
 				if (_my_index != -1)
 					ds_list_delete(target_unit.attacker_list, _my_index);

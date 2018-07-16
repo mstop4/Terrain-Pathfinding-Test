@@ -13,12 +13,16 @@ var _cur_tile_enc, _cur_tile_dec, _cur_unit;
 var _settle_tile_enc, _settle_tile_dec, _existing_unit;
 var _tile_index;
 
+var _ter_tilemap = obj_MCP.ter_tilemap;
+var _grid_width = obj_MCP.grid_width;
+var _grid_height = obj_MCP.grid_height;
+
 while (!ds_queue_empty(_selected_queue) && !ds_queue_empty(_free_queue)) {
 	
 	_cur_tile_enc = ds_queue_dequeue(_free_queue);
 	_cur_tile_dec = decode_coords(_cur_tile_enc);
 
-	_tile_index = get_tile_index(obj_MCP.ter_tilemap,_cur_tile_dec[0],_cur_tile_dec[1]);
+	_tile_index = get_tile_index(_ter_tilemap,_cur_tile_dec[0],_cur_tile_dec[1]);
 	
 	if (_tile_index != 1) {
 		_cur_unit = ds_queue_dequeue(_selected_queue);
@@ -52,7 +56,7 @@ while (!ds_queue_empty(_selected_queue) && !ds_queue_empty(_free_queue)) {
 				with (_existing_unit) {
 					ds_grid_copy(my_settle_grid,other.mp_grid_ds);
 					ds_queue_enqueue(settle_process_queue,encode_coords(_cur_tile_dec[0], _cur_tile_dec[1]));
-					_result = find_settle_tile(obj_MCP.grid_width,obj_MCP.grid_height,my_settle_grid,_occupied_grid,settle_process_queue,_cur_tile_dec,other.obj_MCP.ter_tilemap);
+					_result = find_settle_tile(_grid_width,_grid_height,my_settle_grid,_occupied_grid,settle_process_queue,_cur_tile_dec,_ter_tilemap);
 			
 					if (_result[0] != -1) {
 						var _original_state = my_state;
@@ -82,8 +86,8 @@ while (!ds_queue_empty(_selected_queue) && !ds_queue_empty(_free_queue)) {
 		}
 	}
 	
-	enqueue_free_tile(_cur_tile_dec[0]-1,_cur_tile_dec[1],obj_MCP.grid_width,obj_MCP.grid_height,_visited_grid,_free_queue,obj_MCP.ter_tilemap);
-	enqueue_free_tile(_cur_tile_dec[0],_cur_tile_dec[1]-1,obj_MCP.grid_width,obj_MCP.grid_height,_visited_grid,_free_queue,obj_MCP.ter_tilemap);
-	enqueue_free_tile(_cur_tile_dec[0]+1,_cur_tile_dec[1],obj_MCP.grid_width,obj_MCP.grid_height,_visited_grid,_free_queue,obj_MCP.ter_tilemap);
-	enqueue_free_tile(_cur_tile_dec[0],_cur_tile_dec[1]+1,obj_MCP.grid_width,obj_MCP.grid_height,_visited_grid,_free_queue,obj_MCP.ter_tilemap);
+	enqueue_free_tile(_cur_tile_dec[0]-1,_cur_tile_dec[1],_grid_width,_grid_height,_visited_grid,_free_queue,_ter_tilemap);
+	enqueue_free_tile(_cur_tile_dec[0],_cur_tile_dec[1]-1,_grid_width,_grid_height,_visited_grid,_free_queue,_ter_tilemap);
+	enqueue_free_tile(_cur_tile_dec[0]+1,_cur_tile_dec[1],_grid_width,_grid_height,_visited_grid,_free_queue,_ter_tilemap);
+	enqueue_free_tile(_cur_tile_dec[0],_cur_tile_dec[1]+1,_grid_width,_grid_height,_visited_grid,_free_queue,_ter_tilemap);
 }
