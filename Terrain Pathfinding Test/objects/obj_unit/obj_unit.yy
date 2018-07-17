@@ -218,7 +218,7 @@
             "resourceFilter": 1023,
             "value": "45",
             "varName": "attack_cooldown",
-            "varType": 0
+            "varType": 1
         },
         {
             "id": "2c019ad6-0802-4c20-993e-2879d9a1158a",
@@ -232,6 +232,34 @@
             "resourceFilter": 1023,
             "value": "10",
             "varName": "attack_power",
+            "varType": 0
+        },
+        {
+            "id": "6312852a-13f0-4c4d-932d-afdc4ce20603",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "32",
+            "varName": "detect_range",
+            "varType": 0
+        },
+        {
+            "id": "8d157286-0567-4792-aa30-09e0ad0336f3",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "64",
+            "varName": "chase_range",
             "varType": 0
         }
     ],

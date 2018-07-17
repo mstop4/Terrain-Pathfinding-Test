@@ -1,7 +1,7 @@
 switch (my_state) {
 		
 	case unitState.idle:
-		var _closest_enemy = find_closest_enemy(my_team, attack_range);
+		var _closest_enemy = find_closest_enemy(my_team, detect_range);
 		if (_closest_enemy != noone) {
 			is_attacking = true;
 			my_state = unitState.attacking;
