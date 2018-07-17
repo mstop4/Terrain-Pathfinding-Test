@@ -34,12 +34,18 @@ switch (my_state) {
 		break;
 	
 	case unitState.moving: 
-		if (is_attacking && point_distance(x,y,target_unit.x,target_unit.y) < attack_range) {
+		if (is_attacking && point_distance(x,y,target_unit.x,target_unit.y) <= attack_range) {
 			unit_begin_attack(id,target_unit);
 		}
 			
 		break;
 	
 	case unitState.attacking:
+		if (point_distance(x,y,target_unit.x,target_unit.y) > attack_range) {
+			var _temp_queue = ds_queue_create();
+			ds_queue_enqueue(_temp_queue,id);
+			units_attack(_temp_queue, target_unit);
+			ds_queue_destroy(_temp_queue);
+		}
 		break;
 }

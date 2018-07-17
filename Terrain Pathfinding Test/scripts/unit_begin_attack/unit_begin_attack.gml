@@ -30,6 +30,7 @@ with (_current_unit) {
 		}
 				
 		my_state = unitState.attacking;
+		direction = point_direction(x,y,target_unit.x,target_unit.y);
 		alarm[1] = attack_startup;
 	}
 }
