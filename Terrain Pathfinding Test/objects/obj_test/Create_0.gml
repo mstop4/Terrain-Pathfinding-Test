@@ -1,2 +1,1 @@
-a = ds_grid_create(1,1);
-print(a);
+my_path = path_add();
