@@ -188,7 +188,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "16",
+            "value": "24",
             "varName": "attack_range",
             "varType": 0
         },
@@ -244,7 +244,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "32",
+            "value": "48",
             "varName": "detect_range",
             "varType": 0
         },
@@ -258,7 +258,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "64",
+            "value": "80",
             "varName": "chase_range",
             "varType": 0
         }
