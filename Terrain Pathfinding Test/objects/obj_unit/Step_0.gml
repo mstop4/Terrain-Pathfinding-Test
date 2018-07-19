@@ -41,11 +41,26 @@ switch (my_state) {
 		break;
 	
 	case unitState.attacking:
-		if (point_distance(x,y,target_unit.x,target_unit.y) > attack_range) {
+	
+		var _dist = point_distance(x,y,target_unit.x,target_unit.y);
+	
+		if (_dist > chase_range) {
+			my_state = unitState.idle;
+			is_attacking = false;
+			path_speed = 0;
+			alarm[1] = -1;
+			alarm[2] = -1;
+		}
+	
+		else if (_dist > attack_range &&
+			_dist <= chase_range) {
 			var _temp_queue = ds_queue_create();
 			ds_queue_enqueue(_temp_queue,id);
 			units_attack(_temp_queue, target_unit);
 			ds_queue_destroy(_temp_queue);
+			alarm[1] = -1;
+			alarm[2] = -1;
 		}
+	
 		break;
 }
