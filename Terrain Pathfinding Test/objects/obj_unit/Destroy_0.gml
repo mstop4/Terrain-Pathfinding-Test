@@ -10,6 +10,7 @@ var _occupied_grid = ds_grid_create(obj_MCP.grid_width,obj_MCP.grid_height);
 ds_queue_enqueue(_free_queue,encode_coords(_goal_tile_x,_goal_tile_y));
 
 with (obj_unit) {
+	// remove defeated unit from own attacker list
 	var _i = ds_list_find_index(attacker_list,other.id);
 	if (_i != -1) {
 		ds_list_delete(attacker_list,_i);
@@ -18,6 +19,7 @@ with (obj_unit) {
 	if (ds_list_find_index(other.attacker_list,id) != -1) {
 		ds_queue_enqueue(_selected_queue,id);
 		my_state = unitState.ready;
+		is_attacking = false;
 	}
 	
 	else {
