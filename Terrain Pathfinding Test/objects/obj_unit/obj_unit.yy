@@ -179,6 +179,20 @@
             "varType": 1
         },
         {
+            "id": "91125ef4-4cae-43b3-a310-c6e47659f578",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "32",
+            "varName": "min_attack_range",
+            "varType": 0
+        },
+        {
             "id": "0c18fa00-ade2-4d5a-9959-6be41d0186ce",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -188,7 +202,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "24",
+            "value": "64",
             "varName": "attack_range",
             "varType": 0
         },

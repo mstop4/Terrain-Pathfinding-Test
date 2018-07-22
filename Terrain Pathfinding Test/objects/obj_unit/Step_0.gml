@@ -44,7 +44,26 @@ switch (my_state) {
 	
 		var _dist = point_distance(x,y,target_unit.x,target_unit.y);
 	
-		if (_dist > chase_range) {
+		if (_dist < min_attack_range) {
+			var _dir = point_direction(target_unit.x,target_unit.y,x,y);
+			
+			var _x_spd = lengthdir_x(my_speed,_dir);
+			var _y_spd = lengthdir_y(my_speed,_dir);
+	
+			if (!instance_meeting_tile(id,obj_MCP.ter_tilemap,_x_spd,0)) {
+				x += _x_spd;
+				alarm[1] = -1;
+				alarm[2] = -1;
+			}
+	
+			if (!instance_meeting_tile(id,obj_MCP.ter_tilemap,0,_y_spd)) {
+				y += _y_spd;
+				alarm[1] = -1;
+				alarm[2] = -1;
+			}
+		}
+	
+		else if (_dist > chase_range) {
 			my_state = unitState.idle;
 			is_attacking = false;
 			path_speed = 0;
@@ -61,6 +80,9 @@ switch (my_state) {
 			alarm[1] = -1;
 			alarm[2] = -1;
 		}
+		
+		else if (alarm[1] == -1 && alarm[2] == -1)
+			unit_begin_attack(id,target_unit);
 	
 		break;
 }

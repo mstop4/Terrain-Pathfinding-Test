@@ -1,6 +1,8 @@
 my_goto_path = path_add();
 goal_x = x;
 goal_y = y;
+manual_dir = 0;
+manual_speed = 0;
 
 hp = hp_max;
 target_unit = noone;
