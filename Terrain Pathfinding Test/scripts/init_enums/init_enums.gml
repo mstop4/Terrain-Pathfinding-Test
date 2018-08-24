@@ -4,3 +4,8 @@ enum unitState {
 	moving,
 	attacking
 }
+
+enum unitStance {
+	attack,
+	defend
+}

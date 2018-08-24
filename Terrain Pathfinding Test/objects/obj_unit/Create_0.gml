@@ -12,6 +12,7 @@ fight_circle_angle = 0;
 
 selected = false;
 my_state = unitState.idle;
+my_stance = unitStance.defend;
 is_attacking = false;
 
 settle_process_queue = ds_queue_create();
