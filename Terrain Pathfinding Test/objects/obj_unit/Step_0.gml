@@ -1,7 +1,18 @@
 switch (my_state) {
 		
 	case unitState.idle:
-		var _closest_enemy = find_closest_enemy(my_team, detect_range);
+		var _closest_enemy = noone;
+	
+		// respond to assailant
+		if (ds_list_size(attacker_list) != 0) {
+			_closest_enemy = attacker_list[| 0];
+		} 
+		
+		// watch for approaching enemies
+		else {
+			_closest_enemy = find_closest_enemy(my_team, detect_range);
+		}
+	
 		if (_closest_enemy != noone) {
 			is_attacking = true;
 			my_state = unitState.attacking;

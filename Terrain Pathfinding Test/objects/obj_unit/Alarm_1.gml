@@ -8,9 +8,8 @@ if (instance_exists(target_unit)) {
 	
 	else {
 		alarm[2] = attack_cooldown;
-		ds_list_add(target_unit.attacker_list);
-		with (target_unit)
-			event_user(0);
+		if (ds_list_find_index(target_unit.attacker_list,id) == -1) 
+			ds_list_add(target_unit.attacker_list,id);
 	}
 }
 

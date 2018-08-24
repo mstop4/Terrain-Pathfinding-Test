@@ -25,25 +25,12 @@ while (!ds_queue_empty(_selected_queue) ) {
 			
 			// update attack target 
 			target_unit = _target_unit;
-			
-			if (ds_list_find_index(_target_unit.attacker_list, id) == -1)
-				ds_list_add(_target_unit.attacker_list, id);
-				
-			// make room for any new attackers
-			var _at_len = ds_list_size(_target_unit.attacker_list);
-			var _cur_unit;
-			
-			for (var i=0; i<_at_len; i++) {
-				_cur_unit =  _target_unit.attacker_list[| i];
-				if (_cur_unit.my_state == unitState.attacking) {
-					unit_begin_attack(_cur_unit,_target_unit);
-				}
-			}
 		}
 	
 		else {
 			is_attacking = false;
 			
+			// remove self from attack target's list
 			if (target_unit != noone) {
 				var _my_index = ds_list_find_index(target_unit.attacker_list, id);
 				if (_my_index != -1)
