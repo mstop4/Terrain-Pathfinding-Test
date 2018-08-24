@@ -188,7 +188,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "32",
+            "value": "15",
             "varName": "min_attack_range",
             "varType": 0
         },
@@ -202,7 +202,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "64",
+            "value": "17",
             "varName": "attack_range",
             "varType": 0
         },

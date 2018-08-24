@@ -45,55 +45,69 @@ switch (my_state) {
 		break;
 	
 	case unitState.moving: 
-		if (is_attacking && point_distance(x,y,target_unit.x,target_unit.y) <= attack_range) {
-			unit_begin_attack(id,target_unit);
+		if (instance_exists(target_unit)) {
+			if (is_attacking && point_distance(x,y,target_unit.x,target_unit.y) <= attack_range) {
+				unit_begin_attack(id,target_unit);
+			}
+		}
+		
+		else if (is_attacking) {
+			is_attacking = false;
 		}
 			
 		break;
 	
 	case unitState.attacking:
+		
+		if (instance_exists(target_unit)) {
+			var _dist = point_distance(x,y,target_unit.x,target_unit.y);
 	
-		var _dist = point_distance(x,y,target_unit.x,target_unit.y);
-	
-		if (_dist < min_attack_range) {
-			var _dir = point_direction(target_unit.x,target_unit.y,x,y);
+			if (_dist < min_attack_range) {
+				var _dir = point_direction(target_unit.x,target_unit.y,x,y);
 			
-			var _x_spd = lengthdir_x(my_speed,_dir);
-			var _y_spd = lengthdir_y(my_speed,_dir);
+				var _x_spd = lengthdir_x(my_speed,_dir);
+				var _y_spd = lengthdir_y(my_speed,_dir);
 	
-			if (!instance_meeting_tile(id,obj_MCP.ter_tilemap,_x_spd,0)) {
-				x += _x_spd;
+				if (!instance_meeting_tile(id,obj_MCP.ter_tilemap,_x_spd,0)) {
+					x += _x_spd;
+					alarm[1] = -1;
+					alarm[2] = -1;
+				}
+	
+				if (!instance_meeting_tile(id,obj_MCP.ter_tilemap,0,_y_spd)) {
+					y += _y_spd;
+					alarm[1] = -1;
+					alarm[2] = -1;
+				}
+			}
+	
+			else if (_dist > chase_range) {
+				my_state = unitState.idle;
+				is_attacking = false;
+				path_speed = 0;
 				alarm[1] = -1;
 				alarm[2] = -1;
 			}
 	
-			if (!instance_meeting_tile(id,obj_MCP.ter_tilemap,0,_y_spd)) {
-				y += _y_spd;
+			else if (_dist > attack_range &&
+				_dist <= chase_range) {
+				var _temp_queue = ds_queue_create();
+				ds_queue_enqueue(_temp_queue,id);
+				units_attack(_temp_queue, target_unit);
+				ds_queue_destroy(_temp_queue);
 				alarm[1] = -1;
 				alarm[2] = -1;
 			}
-		}
-	
-		else if (_dist > chase_range) {
+		
+			else if (alarm[1] == -1 && alarm[2] == -1)
+				unit_begin_attack(id,target_unit);
+		} 
+		
+		else {
+			target_unit = noone;
 			my_state = unitState.idle;
-			is_attacking = false;
-			path_speed = 0;
-			alarm[1] = -1;
-			alarm[2] = -1;
-		}
-	
-		else if (_dist > attack_range &&
-			_dist <= chase_range) {
-			var _temp_queue = ds_queue_create();
-			ds_queue_enqueue(_temp_queue,id);
-			units_attack(_temp_queue, target_unit);
-			ds_queue_destroy(_temp_queue);
-			alarm[1] = -1;
-			alarm[2] = -1;
+			sprite_index = idle_spr;
 		}
 		
-		else if (alarm[1] == -1 && alarm[2] == -1)
-			unit_begin_attack(id,target_unit);
-	
 		break;
 }
