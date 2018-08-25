@@ -279,6 +279,14 @@
             }
         },
         {
+            "Key": "9c1c5979-aeab-4607-887d-cb74a074c0b0",
+            "Value": {
+                "id": "2c9de045-3ba4-4e54-b3e7-f17643eb7b56",
+                "resourcePath": "scripts\\unit_reset_alarms\\unit_reset_alarms.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a128950b-5063-4876-b4a6-b99dbd2ea6d1",
             "Value": {
                 "id": "4d099d02-9522-4706-93ab-e7b01aa3219f",
@@ -528,6 +536,7 @@
         "b171f75f-74e5-48d3-92f1-489635780ae6",
         "7ac25901-bbe6-430b-8275-27afcbf38d6b",
         "bb6b9b57-7e68-4100-a382-264e3520e3b4",
+        "9c1c5979-aeab-4607-887d-cb74a074c0b0",
         "7c990982-dd6c-4826-acc6-29c717528bc3",
         "2b438466-c5e4-4f02-a0db-e16a92d5e8c3"
     ],

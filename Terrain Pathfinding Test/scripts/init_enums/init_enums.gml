@@ -2,7 +2,8 @@ enum unitState {
 	idle,
 	ready,
 	moving,
-	attacking
+	attacking,
+	attacking_delay
 }
 
 enum unitStance {

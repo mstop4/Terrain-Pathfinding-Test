@@ -13,8 +13,7 @@ with (obj_unit) {
 	if (selected) {
 		ds_queue_enqueue(_selected_queue,id);
 		my_state = unitState.ready;
-		alarm[1] = -1;
-		alarm[2] = -1;
+		unit_reset_alarms();
 	}
 	
 	else {

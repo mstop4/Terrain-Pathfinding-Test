@@ -14,6 +14,7 @@ selected = false;
 my_state = unitState.idle;
 my_stance = unitStance.defend;
 is_attacking = false;
+is_watching = true;
 
 settle_process_queue = ds_queue_create();
 my_settle_grid = ds_grid_create(obj_MCP.grid_width,obj_MCP.grid_height);

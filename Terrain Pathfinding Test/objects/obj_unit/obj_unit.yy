@@ -103,6 +103,26 @@
             "enumb": 76,
             "eventtype": 8,
             "m_owner": "97cfc43c-01bc-46af-b038-6211e05e7358"
+        },
+        {
+            "id": "ae231cf7-5cd3-49b5-9705-67055431235f",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 3,
+            "eventtype": 2,
+            "m_owner": "97cfc43c-01bc-46af-b038-6211e05e7358"
+        },
+        {
+            "id": "5c3ac2a8-8ccb-4c56-a30d-f835050fde1a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 4,
+            "eventtype": 2,
+            "m_owner": "97cfc43c-01bc-46af-b038-6211e05e7358"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -188,7 +208,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "15",
+            "value": "16",
             "varName": "min_attack_range",
             "varType": 0
         },
@@ -202,7 +222,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "17",
+            "value": "22.62",
             "varName": "attack_range",
             "varType": 0
         },

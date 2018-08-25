@@ -50,8 +50,12 @@ while (!ds_queue_empty(_selected_queue) && !ds_queue_empty(_free_queue)) {
 			}
 			
 			else {
-				is_attacking = false;
-				target_unit = noone;
+				with (_cur_unit) {
+					is_attacking = false;
+					is_watching = false;
+					alarm[3] = -1;
+					target_unit = noone;
+				}
 				var _x = (_cur_unit.x - CELL_SIZE / 2) div CELL_SIZE;
 				var _y = (_cur_unit.y - CELL_SIZE / 2) div CELL_SIZE;
 				_visited_grid[# _cur_tile_dec[0], _cur_tile_dec[1]] = 1;
@@ -83,6 +87,8 @@ while (!ds_queue_empty(_selected_queue) && !ds_queue_empty(_free_queue)) {
 							
 								_occupied_grid[# _x, _y] = 0;
 								_occupied_grid[# _result[0], _result[1]] = id;
+								is_watching = false;
+								alarm[3] = -1;
 							}
 						}
 					}
