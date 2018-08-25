@@ -15,15 +15,15 @@ grid_height = room_height div CELL_SIZE;
 mp_grid = mp_grid_create(0,0,grid_width,grid_height,CELL_SIZE,CELL_SIZE);
 mp_grid_ds = ds_grid_create(grid_width,grid_height);
 
-for (var i=12; i<13; i++) {
-	for (var j=12; j<13; j++) {
+for (var i=12; i<15; i++) {
+	for (var j=12; j<15; j++) {
 		var u = instance_create_layer(i * CELL_SIZE + CELL_SIZE / 2,j * CELL_SIZE + CELL_SIZE / 2,"Instances",obj_unit);
 		u.my_team = 1;
 	}
 }
 
-for (var i=0; i<1; i++) {
-	for (var j=0; j<1; j++) {
+for (var i=0; i<3; i++) {
+	for (var j=0; j<3; j++) {
 		var u = instance_create_layer(i * CELL_SIZE + CELL_SIZE / 2,j * CELL_SIZE + CELL_SIZE / 2,"Instances",obj_unit);
 		u.my_team = player_team;
 	}

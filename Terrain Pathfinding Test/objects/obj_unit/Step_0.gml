@@ -49,7 +49,7 @@ switch (my_state) {
 			if (is_attacking) {
 				var _dist = point_distance(x,y,target_unit.x,target_unit.y);
 				if (_dist <= attack_range) {
-					print(string(id) + ": (moving) Attacking target" + string(target_unit));
+					//print(string(id) + ": (moving) Attacking target" + string(target_unit));
 					unit_begin_attack(id,target_unit);
 				}
 			}
@@ -63,7 +63,7 @@ switch (my_state) {
 			var _dist = point_distance(x,y,target_unit.x,target_unit.y);
 	
 			if (_dist < min_attack_range) {
-				print(string(id) + ": Target " + string(target_unit) + " too close");
+				//print(string(id) + ": Target " + string(target_unit) + " too close");
 				var _dir = point_direction(target_unit.x,target_unit.y,x,y);
 			
 				var _x_spd = lengthdir_x(my_speed,_dir);
@@ -81,7 +81,7 @@ switch (my_state) {
 			}
 	
 			else if (_dist > chase_range) {
-				print(string(id) + ": Chase target " + string(target_unit) + " Lost");
+				//print(string(id) + ": Chase target " + string(target_unit) + " Lost");
 				my_state = unitState.idle;
 				is_attacking = false;
 				path_speed = 0;
@@ -90,7 +90,7 @@ switch (my_state) {
 	
 			else if (_dist > attack_range &&
 				_dist <= chase_range) {
-				print(string(id) + ": Chasing target " + string(target_unit));
+				//print(string(id) + ": Chasing target " + string(target_unit));
 				var _temp_queue = ds_queue_create();
 				ds_queue_enqueue(_temp_queue,id);
 				units_attack(_temp_queue, target_unit);
@@ -99,7 +99,7 @@ switch (my_state) {
 			}
 		
 			else if (alarm[1] == -1 && alarm[2] == -1) {
-				print(string(id) + ": (attack) Attacking target" + string(target_unit));
+				//print(string(id) + ": (attack) Attacking target" + string(target_unit));
 				unit_begin_attack(id,target_unit);
 			}
 		} 

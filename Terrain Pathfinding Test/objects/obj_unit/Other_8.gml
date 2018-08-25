@@ -1,7 +1,7 @@
 if (!is_attacking) {
 	if (my_state == unitState.moving) {
 		my_state = unitState.idle;
-		alarm[3] = 120;
+		alarm[3] = 30;
 	}
 }
 
