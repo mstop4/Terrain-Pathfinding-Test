@@ -58,8 +58,8 @@ switch (my_state) {
 		break;
 	
 	case unitState.attacking:
-		
 		if (instance_exists(target_unit)) {
+			path_end();
 			var _dist = point_distance(x,y,target_unit.x,target_unit.y);
 	
 			if (_dist < min_attack_range) {
@@ -107,7 +107,6 @@ switch (my_state) {
 		else {
 			target_unit = noone;
 			my_state = unitState.idle;
-			sprite_index = idle_spr;
 		}
 		
 		break;

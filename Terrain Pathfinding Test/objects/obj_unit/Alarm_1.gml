@@ -18,5 +18,3 @@ if (instance_exists(target_unit)) {
 		}
 	}
 }
-
-sprite_index = idle_spr;
