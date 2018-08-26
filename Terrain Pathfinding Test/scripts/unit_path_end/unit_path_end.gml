@@ -9,5 +9,3 @@ else {
 	my_state = unitState.attacking_delay;
 	alarm[4] = 10;
 }
-
-path_speed = 0;

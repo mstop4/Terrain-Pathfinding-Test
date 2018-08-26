@@ -46,7 +46,6 @@ while (!ds_queue_empty(_selected_queue) && !ds_queue_empty(_free_queue)) {
 		if (_result) {
 			if (_result == 2) {
 				_cur_unit.my_state = unitState.idle;
-				_cur_unit.path_speed = 0;
 			}
 			
 			else {

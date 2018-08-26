@@ -45,6 +45,8 @@ switch (my_state) {
 		break;
 	
 	case unitState.moving: 
+	
+		// target sighted, engage
 		if (instance_exists(target_unit)) {
 			if (is_attacking) {
 				var _dist = point_distance(x,y,target_unit.x,target_unit.y);
@@ -55,11 +57,33 @@ switch (my_state) {
 			}
 		}
 			
+		// move
+		if (point_distance(x,y,path_tar_x,path_tar_y) < my_speed) {
+			x = path_tar_x;
+			y = path_tar_y;
+			path_current_node++;
+			
+			if (path_current_node >= path_num_nodes)
+				unit_path_end();
+			else {
+				path_tar_x = path_get_point_x(my_goto_path,path_current_node);
+				path_tar_y = path_get_point_y(my_goto_path,path_current_node);
+			}
+		}
+		
+		else {
+			direction = point_direction(x,y,path_tar_x,path_tar_y);
+			var _dx = lengthdir_x(my_speed,direction);
+			var _dy = lengthdir_y(my_speed,direction);
+			x += _dx;
+			y += _dy;
+		}
+			
 		break;
 	
 	case unitState.attacking:
+	
 		if (instance_exists(target_unit)) {
-			path_end();
 			var _dist = point_distance(x,y,target_unit.x,target_unit.y);
 	
 			if (_dist < min_attack_range) {
@@ -84,7 +108,6 @@ switch (my_state) {
 				//print(string(id) + ": Chase target " + string(target_unit) + " Lost");
 				my_state = unitState.idle;
 				is_attacking = false;
-				path_speed = 0;
 				unit_reset_alarms();
 			}
 	

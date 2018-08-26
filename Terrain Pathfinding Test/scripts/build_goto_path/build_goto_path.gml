@@ -10,12 +10,9 @@ var success = mp_grid_path(obj_MCP.mp_grid,my_goto_path,x,y,_goal_x,_goal_y,true
 
 if (success) {
 	if (path_get_length(my_goto_path) > 0) {
-		my_state = unitState.moving;
 		goal_x = _goal_x;
 		goal_y = _goal_y;
-		path_set_kind(my_goto_path, 1);
-		path_set_precision(my_goto_path,8);
-		path_start(my_goto_path,my_speed,path_action_stop,true);
+		unit_path_start();
 	}
 	
 	else {
