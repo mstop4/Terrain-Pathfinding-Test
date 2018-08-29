@@ -75,6 +75,7 @@ switch (my_state) {
 			direction = point_direction(x,y,path_tar_x,path_tar_y);
 			var _dx = lengthdir_x(my_speed,direction);
 			var _dy = lengthdir_y(my_speed,direction);
+			
 			x += _dx;
 			y += _dy;
 		}

@@ -1,3 +1,4 @@
+var _start = current_time;
 var _goal_tile_x = (mouse_x div CELL_SIZE);
 var _goal_tile_y = (mouse_y div CELL_SIZE);
 
@@ -43,3 +44,5 @@ ds_queue_destroy(_free_queue);
 ds_queue_destroy(_selected_queue);
 ds_grid_destroy(_visited_grid);
 ds_grid_destroy(_occupied_grid);
+
+print("Time: ", current_time - _start);

@@ -15,8 +15,8 @@ grid_height = room_height div CELL_SIZE;
 mp_grid = mp_grid_create(0,0,grid_width,grid_height,CELL_SIZE,CELL_SIZE);
 mp_grid_ds = ds_grid_create(grid_width,grid_height);
 
-create_units_square(12,12,1,1,1);
-create_units_square(0,0,1,1,player_team);
+create_units_square(12,12,5,5,player_team);
+create_units_square(0,0,0,0,player_team);
 
 hover_unit = noone;
 selecting = false;
