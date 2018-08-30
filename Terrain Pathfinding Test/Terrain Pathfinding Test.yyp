@@ -503,6 +503,14 @@
             }
         },
         {
+            "Key": "e702be93-0610-4968-9392-32407c95f404",
+            "Value": {
+                "id": "b4736695-d927-498a-8af4-a588809901d7",
+                "resourcePath": "objects\\obj_fog2\\obj_fog2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "eafca7c3-f3ba-4334-82f4-53825040045a",
             "Value": {
                 "id": "1b7935a5-6312-43fa-9a74-151f4033896c",
